@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Menú móvil visible por defecto */
+.menu-mobile {
+  display: block;
+}
+
+/* A partir de 1024px, se oculta el menú móvil */
+@media only screen and (min-width: 1024px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+
+.typing-effect span {
+  visibility: hidden;
+  animation: reveal 0.05s linear forwards;
+}
+
+@keyframes reveal {
+  to {
+    visibility: visible;
+  }
+}
