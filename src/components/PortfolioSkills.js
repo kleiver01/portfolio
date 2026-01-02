@@ -7,6 +7,8 @@ const PortfolioSkills = () => {
     { name: 'CSS4', level: 'low', color: 'indigo' }, // Cambiado a Intermedio
     { name: 'JavaScript', level: 'Intermediate', color: 'yellow' }, // Cambiado a Intermedio
     { name: 'React', level: 'low', color: 'cyan' }, // Cambiado a Intermedio
+    { name: 'Next.js', level: 'low', color: 'blue' }, // Cambiado a Intermedio
+    { name: 'TypeScript', level: 'low', color: 'orange' }, // Cambiado a Intermedio
   ];
  
   const getColorClass = (color) => {

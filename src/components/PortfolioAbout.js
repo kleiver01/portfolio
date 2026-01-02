@@ -17,7 +17,7 @@ const PortfolioAbout = () => {
  
 
       <p className="text-lg md:text-xl leading-relaxed text-gray-300 animate-fade-in delay-500 group-hover:text-white transition-colors duration-300">
-        My name is Kleiver Uzcategui, and I'm a web developer specializing in web technologies. I primarily work with HTML, CSS, JavaScript, and React, creating modern, functional, and responsive interfaces. I'm passionate about transforming ideas into intuitive digital experiences, paying close attention to both aesthetics and performance. I'm always looking for new challenges that allow me to continue learning and contribute creative solutions.
+        My name is Kleiver Uzcategui, and I'm a web developer specializing in web technologies. I primarily work with HTML, CSS, JavaScript TypeScript Next.js , and React, creating modern, functional, and responsive interfaces. I'm passionate about transforming ideas into intuitive digital experiences, paying close attention to both aesthetics and performance. I'm always looking for new challenges that allow me to continue learning and contribute creative solutions.
 
       </p>
 

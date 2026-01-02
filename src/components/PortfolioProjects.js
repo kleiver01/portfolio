@@ -9,6 +9,11 @@ import AhorcadoImg from '../image/Ahorcado.png';
 import IpImg from '../image/ip.png';
 import TranslatorImg from '../image/Translator.png';
 import ConversorImg from '../image/Conversor.png';
+import CalculadoraImg from '../image/Calculadora.png';
+import SynonymImg from '../image/Synonym-finder.png';
+import PaletaImg from '../image/paleta.png';
+import CronometroImg from '../image/Cronometro.png';
+import ResturanteImg from '../image/Restaurante.png';
 
 const PortfolioProjects = () => {
   const projects = [
@@ -18,6 +23,20 @@ const PortfolioProjects = () => {
       link: 'https://kleiver01.github.io/Nerdmart/',
       device: 'PC',
       image: NerdMartImg
+    },
+    {
+      name: 'Asados-ahumados',
+      description: '🔥 Website of a Colombian restaurant specializing in smoked meats. Modern design, featured menu, easy reservations, and a location in Pereira.',
+      link: 'https://kleiver01.github.io/Restaurante/',
+      device: 'PC/Mobile',
+      image: ResturanteImg
+    },
+      {
+      name: 'Calculator',
+      description: '🧮 A simple and functional web-based calculator for basic arithmetic operations.',
+      link: 'https://kleiver01.github.io/calculadora/',
+      device: 'PC/Mobile',
+      image: CalculadoraImg
     },
     {
       name: 'Tier Maker',
@@ -48,7 +67,7 @@ const PortfolioProjects = () => {
       image: TicTacToeImg
     },
     {
-      name: 'Conversor de unidades',
+      name: 'Unit converter',
       description: '📏 Web tool to quickly and easily convert units of measurement.',
       link: 'https://kleiver01.github.io/Conversor/',
       device: 'PC/Mobile',
@@ -74,6 +93,27 @@ const PortfolioProjects = () => {
       link: 'https://kleiver01.github.io/08-arkanoid-game/',
       device: 'PC',
       image: ArkanoidImg
+    },
+    {
+     name: 'Synonym-finder',
+      description: '📝 Synonym Finder: A web tool that helps you find synonyms for words quickly and easily.',
+      link: 'https://kleiver01.github.io/Synonym-finder/',
+      device: 'PC/Mobile',
+      image: SynonymImg
+    },
+    {
+     name: 'Palette generator',
+      description: '🎨 Palette Generator: A web tool that helps you create and share color palettes.',
+      link: 'https://kleiver01.github.io/paleta/',
+      device: 'PC/Mobile',
+      image: PaletaImg
+    },
+     {
+     name: 'Chronometer',
+      description: '⏰ Chronometer: A web tool that helps you create and share color palettes.',
+      link: 'https://kleiver01.github.io/Chronometer/',
+      device: 'PC/Mobile',
+      image: CronometroImg
     },
   ];
 
