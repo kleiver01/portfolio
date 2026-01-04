@@ -47,7 +47,17 @@ const AppWrapper = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const languageParam = queryParams.get("language");
+  const wrongParam = queryParams.get("lenguaje"); // detecta si alguien usa ?lenguaje
   const [currentPage, setCurrentPage] = useState("about");
+
+  // Corrige automáticamente ?lenguaje= por ?language=
+  useEffect(() => {
+    if (wrongParam && !languageParam) {
+      queryParams.delete("lenguaje");
+      queryParams.set("language", wrongParam);
+      window.location.replace(`/?${queryParams.toString()}`);
+    }
+  }, [languageParam, wrongParam, location.search]);
 
   useEffect(() => {
     if (languageParam) {
