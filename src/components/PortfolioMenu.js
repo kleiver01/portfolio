@@ -1,37 +1,54 @@
 import React, { useEffect, useRef } from 'react';
- 
-const PortfolioMenu = ({ currentPage, setCurrentPage }) => {
+
+const PortfolioMenu = ({ currentPage, setCurrentPage, language }) => {
+  const translations = {
+    en: {
+      about: "About me",
+      skills: "Skills",
+      projects: "Projects",
+      contact: "Contact",
+      active: "ACTIVE",
+    },
+    es: {
+      about: "Sobre mí",
+      skills: "Habilidades",
+      projects: "Proyectos",
+      contact: "Contacto",
+      active: "ACTIVO",
+    },
+  };
+
+  const t = translations[language] || translations.en;
+
   const menuItems = [
-    { id: 'about', name: 'About me' },
-    { id: 'skills', name: 'Skills' },
-    { id: 'projects', name: 'Projects' },
-    { id: 'contact', name: 'Contact' },
+    { id: 'about', name: t.about },
+    { id: 'skills', name: t.skills },
+    { id: 'projects', name: t.projects },
+    { id: 'contact', name: t.contact },
   ];
- 
+
   const selectSound = useRef(null);
   const navigateSound = useRef(null);
- 
+
   useEffect(() => {
-   
-    selectSound.current = new Audio('https://www.soundjay.com/buttons/button-3.mp3'); // Sonido mause
-    navigateSound.current = new Audio('https://www.soundjay.com/buttons/button-3.mp3'); // Sonido flechas del teclado
- 
-    
+    selectSound.current = new Audio('https://www.soundjay.com/buttons/button-3.mp3'); 
+    navigateSound.current = new Audio('https://www.soundjay.com/buttons/button-3.mp3'); 
+
     if (selectSound.current) selectSound.current.volume = 0.3;
     if (navigateSound.current) navigateSound.current.volume = 0.3;
   }, []);
- 
+
   const playSound = (audioRef) => {
     if (audioRef.current) {
-      audioRef.current.currentTime = 0; // Reiniciar sonido
+      audioRef.current.currentTime = 0;
       audioRef.current.play();
     }
   };
- 
+
   const handleKeyDown = (event) => {
     const currentIndex = menuItems.findIndex(item => item.id === currentPage);
     let newIndex = currentIndex;
- 
+
     if (event.key === 'ArrowDown') {
       newIndex = (currentIndex + 1) % menuItems.length;
       playSound(navigateSound);
@@ -43,14 +60,14 @@ const PortfolioMenu = ({ currentPage, setCurrentPage }) => {
     }
     setCurrentPage(menuItems[newIndex].id);
   };
- 
+
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [currentPage]);
- 
+
   return (
     <nav className="flex flex-col p-4 space-y-3 bg-gradient-to-br from-purple-900 to-indigo-900 rounded-3xl shadow-2xl border border-purple-700 transform perspective-1000 rotate-x-6 animate-pulse-border">
       {menuItems.map((item) => (
@@ -74,7 +91,7 @@ const PortfolioMenu = ({ currentPage, setCurrentPage }) => {
           {item.name}
           {currentPage === item.id && (
             <span className="absolute top-0 right-0 -mt-2 -mr-2 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded-full animate-ping-slow">
-              ACTIVE
+              {t.active}
             </span>
           )}
         </button>
@@ -82,5 +99,5 @@ const PortfolioMenu = ({ currentPage, setCurrentPage }) => {
     </nav>
   );
 };
- 
+
 export default PortfolioMenu;

@@ -1,13 +1,30 @@
 import React, { useState } from 'react';
 
-const MobileMenu = ({ currentPage, setCurrentPage }) => {
+const MobileMenu = ({ currentPage, setCurrentPage, language }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const translations = {
+    en: {
+      about: "About me",
+      skills: "Skills",
+      projects: "Projects",
+      contact: "Contact",
+    },
+    es: {
+      about: "Sobre mí",
+      skills: "Habilidades",
+      projects: "Proyectos",
+      contact: "Contacto",
+    },
+  };
+
+  const t = translations[language] || translations.en;
+
   const menuItems = [
-    { id: 'about', name: 'About me' },
-    { id: 'skills', name: 'Skills' },
-    { id: 'projects', name: 'Projects' },
-    { id: 'contact', name: 'Contact' },
+    { id: 'about', name: t.about },
+    { id: 'skills', name: t.skills },
+    { id: 'projects', name: t.projects },
+    { id: 'contact', name: t.contact },
   ];
 
   const handleSelect = (id) => {

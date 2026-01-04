@@ -1,26 +1,75 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+  useNavigate,
+} from 'react-router-dom';
 import PortfolioMenu from './components/PortfolioMenu';
-import MobileMenu from './components/MobileMenu'; // 👈 importa el menú móvil
+import MobileMenu from './components/MobileMenu';
 import PortfolioAbout from './components/PortfolioAbout';
 import PortfolioSkills from './components/PortfolioSkills';
 import PortfolioProjects from './components/PortfolioProjects';
 import PortfolioContact from './components/PortfolioContact';
 
-const App = () => {
-  const [currentPage, setCurrentPage] = useState('about');
+const LanguageSwitcher = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const currentParams = new URLSearchParams(location.search);
+  const currentLanguage = currentParams.get("language") || "en";
 
-  const renderPage = () => {
+  const switchLanguage = (lang) => {
+    currentParams.set("language", lang);
+    navigate({ pathname: "/", search: currentParams.toString() });
+  };
+
+  return (
+    <div className="absolute top-4 right-4 z-50 flex space-x-2">
+      <button
+        onClick={() => switchLanguage("en")}
+        className={`px-3 py-1 rounded ${currentLanguage === "en" ? "bg-blue-600" : "bg-gray-800"} hover:bg-blue-500`}
+      >
+        EN
+      </button>
+      <button
+        onClick={() => switchLanguage("es")}
+        className={`px-3 py-1 rounded ${currentLanguage === "es" ? "bg-green-600" : "bg-gray-800"} hover:bg-green-500`}
+      >
+        ES
+      </button>
+    </div>
+  );
+};
+
+const AppWrapper = () => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const languageParam = queryParams.get("language");
+  const [currentPage, setCurrentPage] = useState("about");
+
+  useEffect(() => {
+    if (languageParam) {
+      localStorage.setItem("preferredLanguage", languageParam);
+    }
+  }, [languageParam]);
+
+  const savedLanguage = localStorage.getItem("preferredLanguage");
+  const language = languageParam || savedLanguage || "en";
+
+  const renderPage = (language) => {
     switch (currentPage) {
-      case 'about':
-        return <PortfolioAbout />;
-      case 'skills':
-        return <PortfolioSkills />;
-      case 'projects':
-        return <PortfolioProjects />;
-      case 'contact':
-        return <PortfolioContact />;
+      case "about":
+        return <PortfolioAbout language={language} />;
+      case "skills":
+        return <PortfolioSkills language={language} />;
+      case "projects":
+        return <PortfolioProjects language={language} />;
+      case "contact":
+        return <PortfolioContact language={language} />;
       default:
-        return <PortfolioAbout />;
+        return <PortfolioAbout language={language} />;
     }
   };
 
@@ -56,22 +105,35 @@ const App = () => {
         .group:hover > div { transform: scale(1.01) rotateZ(0.5deg); transition: transform 0.3s ease-out; }
       `}</style>
 
+      {/* Selector de idioma */}
+      <LanguageSwitcher />
+
       {/* Menú hamburguesa primero (solo móvil) */}
       <div className="block md:hidden w-full z-50">
-        <MobileMenu currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <MobileMenu currentPage={currentPage} setCurrentPage={setCurrentPage} language={language} />
       </div>
 
       {/* Menú lateral solo en desktop */}
       <div className="hidden md:block relative z-10 md:mr-16 mb-12 md:mb-0">
-        <PortfolioMenu currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <PortfolioMenu currentPage={currentPage} setCurrentPage={setCurrentPage} language={language} />
       </div>
 
       {/* Contenido principal */}
       <div className="relative z-10 flex-1 w-full max-w-4xl group">
-        {renderPage()}
+        {renderPage(language)}
       </div>
     </div>
   );
 };
+
+const App = () => (
+  <Router basename="/portfolio">
+    <Routes>
+      <Route path="/" element={<AppWrapper />} />
+      <Route path="/es" element={<Navigate to="/?language=es" />} />
+      <Route path="/en" element={<Navigate to="/?language=en" />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
