@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PORTFOLIO/static/css/main.75fd66b6.css",
-    "main.js": "/PORTFOLIO/static/js/main.a6862e34.js",
+    "main.css": "/PORTFOLIO/static/css/main.5ff3de1e.css",
+    "main.js": "/PORTFOLIO/static/js/main.3f01326c.js",
     "static/media/Restaurante.png": "/PORTFOLIO/static/media/Restaurante.45ff567894446b2ad54f.png",
     "static/media/NerdMart.png": "/PORTFOLIO/static/media/NerdMart.33f82b8ee5da03c86e70.png",
     "static/media/Synonym-finder.png": "/PORTFOLIO/static/media/Synonym-finder.34fc42e40d62ad91cbef.png",
@@ -17,11 +17,11 @@
     "static/media/Tic-tac-toe.png": "/PORTFOLIO/static/media/Tic-tac-toe.568a19fb319b2a106506.png",
     "static/media/Ahorcado.png": "/PORTFOLIO/static/media/Ahorcado.b565a8875e9cac43a04b.png",
     "index.html": "/PORTFOLIO/index.html",
-    "main.75fd66b6.css.map": "/PORTFOLIO/static/css/main.75fd66b6.css.map",
-    "main.a6862e34.js.map": "/PORTFOLIO/static/js/main.a6862e34.js.map"
+    "main.5ff3de1e.css.map": "/PORTFOLIO/static/css/main.5ff3de1e.css.map",
+    "main.3f01326c.js.map": "/PORTFOLIO/static/js/main.3f01326c.js.map"
   },
   "entrypoints": [
-    "static/css/main.75fd66b6.css",
-    "static/js/main.a6862e34.js"
+    "static/css/main.5ff3de1e.css",
+    "static/js/main.3f01326c.js"
   ]
 }
