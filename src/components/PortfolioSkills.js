@@ -30,6 +30,7 @@ const PortfolioSkills = ({ language }) => {
     { name: 'React', level: 'low', color: 'cyan' },
     { name: 'Next.js', level: 'low', color: 'blue' },
     { name: 'TypeScript', level: 'low', color: 'orange' },
+    { name: 'Git', level: 'low', color: 'orange' },
   ];
 
   const getColorClass = (color) => {

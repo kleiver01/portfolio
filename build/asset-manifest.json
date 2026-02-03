@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/PORTFOLIO/static/css/main.5ff3de1e.css",
-    "main.js": "/PORTFOLIO/static/js/main.421d727a.js",
-    "static/media/Restaurante.png": "/PORTFOLIO/static/media/Restaurante.45ff567894446b2ad54f.png",
-    "static/media/NerdMart.png": "/PORTFOLIO/static/media/NerdMart.33f82b8ee5da03c86e70.png",
-    "static/media/Synonym-finder.png": "/PORTFOLIO/static/media/Synonym-finder.34fc42e40d62ad91cbef.png",
-    "static/media/Snake-game.png": "/PORTFOLIO/static/media/Snake-game.2b236cc4370d3a92cd85.png",
-    "static/media/Translator.png": "/PORTFOLIO/static/media/Translator.e62de970c0ab0ea3f567.png",
-    "static/media/Tier-maker.png": "/PORTFOLIO/static/media/Tier-maker.6f64234f553f8fa87cb1.png",
-    "static/media/Arkanoid-game.png": "/PORTFOLIO/static/media/Arkanoid-game.8dbbc624b3275a97aa5d.png",
-    "static/media/Calculadora.png": "/PORTFOLIO/static/media/Calculadora.480131c40d7f765eb181.png",
-    "static/media/Conversor.png": "/PORTFOLIO/static/media/Conversor.8f6686c9e3376b21ae23.png",
-    "static/media/ip.png": "/PORTFOLIO/static/media/ip.c5d4cbb7363147d3f4cc.png",
-    "static/media/Cronometro.png": "/PORTFOLIO/static/media/Cronometro.64cd1cac87a0066dfe51.png",
-    "static/media/paleta.png": "/PORTFOLIO/static/media/paleta.8aa213de097e3a1d9e7c.png",
-    "static/media/Tic-tac-toe.png": "/PORTFOLIO/static/media/Tic-tac-toe.568a19fb319b2a106506.png",
-    "static/media/Ahorcado.png": "/PORTFOLIO/static/media/Ahorcado.b565a8875e9cac43a04b.png",
-    "index.html": "/PORTFOLIO/index.html",
-    "main.5ff3de1e.css.map": "/PORTFOLIO/static/css/main.5ff3de1e.css.map",
-    "main.421d727a.js.map": "/PORTFOLIO/static/js/main.421d727a.js.map"
+    "main.css": "/portfolio/static/css/main.5ff3de1e.css",
+    "main.js": "/portfolio/static/js/main.7f0729ec.js",
+    "static/media/Restaurante.png": "/portfolio/static/media/Restaurante.45ff567894446b2ad54f.png",
+    "static/media/NerdMart.png": "/portfolio/static/media/NerdMart.33f82b8ee5da03c86e70.png",
+    "static/media/Synonym-finder.png": "/portfolio/static/media/Synonym-finder.34fc42e40d62ad91cbef.png",
+    "static/media/Snake-game.png": "/portfolio/static/media/Snake-game.2b236cc4370d3a92cd85.png",
+    "static/media/Translator.png": "/portfolio/static/media/Translator.e62de970c0ab0ea3f567.png",
+    "static/media/Tier-maker.png": "/portfolio/static/media/Tier-maker.6f64234f553f8fa87cb1.png",
+    "static/media/Arkanoid-game.png": "/portfolio/static/media/Arkanoid-game.8dbbc624b3275a97aa5d.png",
+    "static/media/Calculadora.png": "/portfolio/static/media/Calculadora.480131c40d7f765eb181.png",
+    "static/media/Conversor.png": "/portfolio/static/media/Conversor.8f6686c9e3376b21ae23.png",
+    "static/media/ip.png": "/portfolio/static/media/ip.c5d4cbb7363147d3f4cc.png",
+    "static/media/Cronometro.png": "/portfolio/static/media/Cronometro.64cd1cac87a0066dfe51.png",
+    "static/media/paleta.png": "/portfolio/static/media/paleta.8aa213de097e3a1d9e7c.png",
+    "static/media/Tic-tac-toe.png": "/portfolio/static/media/Tic-tac-toe.568a19fb319b2a106506.png",
+    "static/media/Ahorcado.png": "/portfolio/static/media/Ahorcado.b565a8875e9cac43a04b.png",
+    "index.html": "/portfolio/index.html",
+    "main.5ff3de1e.css.map": "/portfolio/static/css/main.5ff3de1e.css.map",
+    "main.7f0729ec.js.map": "/portfolio/static/js/main.7f0729ec.js.map"
   },
   "entrypoints": [
     "static/css/main.5ff3de1e.css",
-    "static/js/main.421d727a.js"
+    "static/js/main.7f0729ec.js"
   ]
 }

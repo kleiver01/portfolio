@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import menuAudioSource from '../Audio/Menu.mp3';
 
 const PortfolioMenu = ({ currentPage, setCurrentPage, language }) => {
   const translations = {
@@ -30,9 +31,10 @@ const PortfolioMenu = ({ currentPage, setCurrentPage, language }) => {
   const selectSound = useRef(null);
   const navigateSound = useRef(null);
 
-  useEffect(() => {
-    selectSound.current = new Audio('https://www.soundjay.com/buttons/button-3.mp3'); 
-    navigateSound.current = new Audio('https://www.soundjay.com/buttons/button-3.mp3'); 
+useEffect(() => {
+    // Usamos la variable importada aquí
+    selectSound.current = new Audio(menuAudioSource);
+    navigateSound.current = new Audio(menuAudioSource);
 
     if (selectSound.current) selectSound.current.volume = 0.3;
     if (navigateSound.current) navigateSound.current.volume = 0.3;
